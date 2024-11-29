@@ -1,12 +1,13 @@
+/* 全体レイアウト */
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background-color: #f4f6fc;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .phone-frame {
@@ -20,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* 相对于 .phone-frame 定位 */
 }
 
 .content {
@@ -57,4 +59,41 @@ h1 {
 .button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 戻るボタン */
+.back-button {
+    position: absolute; /* 相对于 .phone-frame 定位 */
+    top: 20px;  /* 距离手机屏幕顶部20px */
+    left: 20px;  /* 距离手机屏幕左边20px */
+    padding: 10px 20px;
+    background-color: #ff5e57;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #cc4b44; /* 按钮 hover 时颜色变化 */
+    transform: translateY(-2px); /* 按钮浮动效果 */
 }
